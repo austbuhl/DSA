@@ -6,6 +6,11 @@ class Node {
   }
 }
 
+//Big O of Doubly Linked lists
+// Insertion & Removal - O(1)
+// Searching & Access - O(N)
+// Technically, searchcing is O(N/2) but that reduces to O(N)
+
 class DoublyLinkedList {
   constructor() {
     this.head = null
