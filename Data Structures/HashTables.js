@@ -9,6 +9,9 @@ function hash(key, arrayLen) {
   return total
 }
 
+// BIG O of HASH TABLES
+// Insert, Deltion, Access - O(1)
+
 class HashTable {
   constructor(size = 53) {
     this.keyMap = new Array(size)
