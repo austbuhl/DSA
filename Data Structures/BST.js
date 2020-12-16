@@ -55,51 +55,51 @@ class BinarySearchTree {
 
   BFS() {
     let node = this.root
-    const data = []
+    const visited = []
     const queue = []
 
     queue.push(node)
 
     while (queue.length) {
       node = queue.shift()
-      data.push(node.val)
+      visited.push(node.val)
       if (node.left) queue.push(node.left)
       if (node.right) queue.push(node.right)
     }
-    return data
+    return visited
   }
 
   DFSPreOrder() {
-    const data = []
+    const visted = []
     function traverse(node) {
-      data.push(node.val)
+      visted.push(node.val)
       if (node.left) traverse(node.left)
       if (node.right) traverse(node.right)
     }
     traverse(this.root)
-    return data
+    return visted
   }
 
   DFSPostOrder() {
-    const data = []
+    const visited = []
     function traverse(node) {
       if (node.left) traverse(node.left)
       if (node.right) traverse(node.right)
-      data.push(node.val)
+      visited.push(node.val)
     }
     traverse(this.root)
-    return data
+    return visited
   }
 
   DFSInOrder() {
-    const data = []
+    const visited = []
     function traverse(node) {
       if (node.left) traverse(node.left)
-      data.push(node.val)
+      visited.push(node.val)
       if (node.right) traverse(node.right)
     }
     traverse(this.root)
-    return data
+    return visited
   }
 }
 
